@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35506.116 d17.12
+VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F09CEFBE-F473-4CE6-ACBC-E4A9A820B228}"
 EndProject
@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalTicket.TicketManagement.Domain", "GlobalTicket.TicketManagement.Domain\GlobalTicket.TicketManagement.Domain.csproj", "{F993BB0A-7231-49FE-B6C6-1D87B9B218F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalTicket.TicketManagement.Application", "GlobalTicket.TicketManagement.Application\GlobalTicket.TicketManagement.Application.csproj", "{AB2EAAF7-6EF8-4BDF-8793-DF7E90F459DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F993BB0A-7231-49FE-B6C6-1D87B9B218F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F993BB0A-7231-49FE-B6C6-1D87B9B218F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F993BB0A-7231-49FE-B6C6-1D87B9B218F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB2EAAF7-6EF8-4BDF-8793-DF7E90F459DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB2EAAF7-6EF8-4BDF-8793-DF7E90F459DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB2EAAF7-6EF8-4BDF-8793-DF7E90F459DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB2EAAF7-6EF8-4BDF-8793-DF7E90F459DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,5 +43,6 @@ Global
 		{A18452E0-4F5B-4EE1-BB34-CC7B83C745D0} = {F09CEFBE-F473-4CE6-ACBC-E4A9A820B228}
 		{5434C950-D73F-44A7-9C08-27850F60D55A} = {F09CEFBE-F473-4CE6-ACBC-E4A9A820B228}
 		{F993BB0A-7231-49FE-B6C6-1D87B9B218F4} = {B18A8A0D-E534-4102-8F30-78E673983D33}
+		{AB2EAAF7-6EF8-4BDF-8793-DF7E90F459DC} = {B18A8A0D-E534-4102-8F30-78E673983D33}
 	EndGlobalSection
 EndGlobal

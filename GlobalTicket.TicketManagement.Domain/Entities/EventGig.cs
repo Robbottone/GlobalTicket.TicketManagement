@@ -6,6 +6,7 @@ public class EventGig
 	public string? Description { get; set; }
 	public int Price          { get; set; }
 	public string[] Artist    { get; set; } = [];
-	public DateTime Date      { get; set; }
+	public DateTime EventDate      { get; set; }
 	public Guid CategoryId    { get; set; }
+	public Category? Category { get; set; }
 }
