@@ -1,1 +1,1 @@
-# GlobalTicket - TicketManageer
+# GlobalTicket - TicketManager
