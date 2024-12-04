@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F09CEFBE-F473-4CE6-ACBC-E4A9A820B228}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{EA68EEC3-74C2-4FFF-A8BB-BCB09DC67CED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{B5B3B044-003B-4CA0-AC16-2FC256422CD1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B18A8A0D-E534-4102-8F30-78E673983D33}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{A18452E0-4F5B-4EE1-BB34-CC7B83C745D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{5434C950-D73F-44A7-9C08-27850F60D55A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalTicket.TicketManagement.Domain", "GlobalTicket.TicketManagement.Domain\GlobalTicket.TicketManagement.Domain.csproj", "{F993BB0A-7231-49FE-B6C6-1D87B9B218F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F993BB0A-7231-49FE-B6C6-1D87B9B218F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F993BB0A-7231-49FE-B6C6-1D87B9B218F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F993BB0A-7231-49FE-B6C6-1D87B9B218F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F993BB0A-7231-49FE-B6C6-1D87B9B218F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B5B3B044-003B-4CA0-AC16-2FC256422CD1} = {F09CEFBE-F473-4CE6-ACBC-E4A9A820B228}
+		{B18A8A0D-E534-4102-8F30-78E673983D33} = {F09CEFBE-F473-4CE6-ACBC-E4A9A820B228}
+		{A18452E0-4F5B-4EE1-BB34-CC7B83C745D0} = {F09CEFBE-F473-4CE6-ACBC-E4A9A820B228}
+		{5434C950-D73F-44A7-9C08-27850F60D55A} = {F09CEFBE-F473-4CE6-ACBC-E4A9A820B228}
+		{F993BB0A-7231-49FE-B6C6-1D87B9B218F4} = {B18A8A0D-E534-4102-8F30-78E673983D33}
+	EndGlobalSection
+EndGlobal
