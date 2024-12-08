@@ -20,7 +20,6 @@
 
   <ItemGroup>
     <Folder Include="Contracts\Features\Categories\Command\" />
-    <Folder Include="Contracts\Features\EventGig\Commands\UpdateEvent\" />
     <Folder Include="Contracts\Features\Orders\Command\" />
     <Folder Include="Contracts\Features\Orders\Queries\" />
   </ItemGroup>

@@ -3,21 +3,20 @@ using GlobalTicket.TicketManagement.Application.Contracts.Persistence;
 using MediatR;
 using EnsureThat;
 using System.Runtime.CompilerServices;
+using AutoMapper;
 
 namespace GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig.Commands.DeleteEvent;
 
-public class DeleteEventGigCommandHandler : IRequestHandler<DeleteEventGigCommand>
+public class DeleteEventGigCommandHandler : EventCommandBase<DeleteEventGigCommand>
 {
-	IEventGigRepostiory eventRepostiory { get; set; }
-	public DeleteEventGigCommandHandler(IEventGigRepostiory eventRepository)
+	public DeleteEventGigCommandHandler(IEventGigRepostiory eventRepository, IMapper mapper): base(eventRepository, mapper)
 	{
-		this.eventRepostiory = eventRepository;
 	}
 
-	public async Task Handle(DeleteEventGigCommand request, CancellationToken cancellationToken)
+	public override async Task Handle(DeleteEventGigCommand request, CancellationToken cancellationToken)
 	{
 		EnsureArg.IsNotNull(request);
 		
-		var delete = await this.eventRepostiory.DeleteAsync(request.Id);
+		var delete = await this.eventRepository.DeleteAsync(request.Id);
 	}
 }

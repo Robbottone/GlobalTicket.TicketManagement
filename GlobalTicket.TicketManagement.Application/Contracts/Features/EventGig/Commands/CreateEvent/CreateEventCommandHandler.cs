@@ -5,22 +5,16 @@ using MediatR;
 
 namespace GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig.Commands.CreateEvent;
 
-public class CreateEventCommandHandler : IRequestHandler<CreateEventGigCommand, Guid>
+public class CreateEventCommandHandler : EventCommandBase<CreateEventGigCommand, Guid>
 {
-	public IEventGigRepostiory eventRepository;	
-	public IMapper mapper;
-
-	public CreateEventCommandHandler(IMapper mapper, IEventGigRepostiory eventRepository)
+	
+	public CreateEventCommandHandler(IEventGigRepostiory eventRepository, IMapper mapper): base(eventRepository, mapper)
 	{
-		this.eventRepository = eventRepository;
-		this.mapper = mapper;
+	
 	}
 
-	public async Task<Guid> Handle(CreateEventGigCommand request, CancellationToken cancellationToken)
+	public override async Task<Guid> Handle(CreateEventGigCommand request, CancellationToken cancellationToken)
 	{
-		//validation
-
-
 		//mapper command to model
 		var @event = this.mapper.Map<EventG>(request);
 		//insert
