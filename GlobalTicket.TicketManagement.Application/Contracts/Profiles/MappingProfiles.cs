@@ -1,6 +1,9 @@
 ﻿using AutoMapper;
-using GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig;
-using GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig.Response;
+using GlobalTicket.TicketManagement.Application.Contracts.Features.Categories.Queries.GetCategories;
+using GlobalTicket.TicketManagement.Application.Contracts.Features.Categories.Queries.GetCategoriesDetailed;
+using GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig.Commands.CreateEvent;
+using GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig.Query.EventGigDetailed;
+using GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig.Query.EventGigList;
 using GlobalTicket.TicketManagement.Domain.Entities;
 
 namespace GlobalTicket.TicketManagement.Application.Contracts.Profiles;
@@ -10,7 +13,11 @@ public class MappingProfiles: Profile
 	public MappingProfiles()
 	{
 		CreateMap<EventGig, EventGigViewModel>().ReverseMap(); //two way mapping
-		CreateMap<EventGig, EventGigDetailedViewModel>().ReverseMap(); 
-		CreateMap<Category, CategoryDto>().ReverseMap(); 
+		CreateMap<EventGig, EventGigDetailedViewModel>().ReverseMap();
+		CreateMap<EventGig, CreateEventGigCommand>().ReverseMap();
+
+		CreateMap<Category, CategoryDto>();
+		CreateMap<Category, CategoryViewModel>();
+		CreateMap<Category, CategoryDetailedViewModel>().ReverseMap();
 	}
 }

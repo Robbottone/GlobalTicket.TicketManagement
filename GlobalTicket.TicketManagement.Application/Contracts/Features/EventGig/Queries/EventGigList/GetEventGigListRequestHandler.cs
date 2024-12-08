@@ -2,17 +2,15 @@
 using GlobalTicket.TicketManagement.Application.Contracts.Persistence;
 using EventGigs = GlobalTicket.TicketManagement.Domain.Entities.EventGig;
 using MediatR;
-using GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig.Response;
-using GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig.Request;
 
-namespace GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig.Handler;
+namespace GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig.Query.EventGigList;
 
-public class GetEventGigListQueryHandler : IRequestHandler<GetEventGigsListRequest, List<EventGigViewModel>>
+public class GetEventGigListRequestHandler : IRequestHandler<GetEventGigsListRequest, List<EventGigViewModel>>
 {
 	private IAsyncRepository<EventGigs> eventRepository;
 	private IMapper mapper;
 
-	public GetEventGigListQueryHandler(IMapper mapper, IAsyncRepository<EventGigs> eventRepository)
+	public GetEventGigListRequestHandler(IMapper mapper, IAsyncRepository<EventGigs> eventRepository)
 	{
 		this.mapper = mapper;
 		this.eventRepository = eventRepository;

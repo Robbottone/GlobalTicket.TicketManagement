@@ -1,4 +1,4 @@
-﻿namespace GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig.Response;
+﻿namespace GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig.Query.EventGigDetailed;
 
 public class EventGigDetailedViewModel
 {

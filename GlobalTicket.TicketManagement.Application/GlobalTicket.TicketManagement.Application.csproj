@@ -18,4 +18,10 @@
     <ProjectReference Include="..\GlobalTicket.TicketManagement.Domain\GlobalTicket.TicketManagement.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Contracts\Features\Categories\Command\" />
+    <Folder Include="Contracts\Features\Orders\Command\" />
+    <Folder Include="Contracts\Features\Orders\Queries\" />
+  </ItemGroup>
+
 </Project>
