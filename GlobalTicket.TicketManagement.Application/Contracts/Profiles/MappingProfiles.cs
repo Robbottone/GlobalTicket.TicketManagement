@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using GlobalTicket.TicketManagement.Application.Contracts.Features.Categories.Command.CreateCategory;
+using GlobalTicket.TicketManagement.Application.Contracts.Features.Categories.Command.UpdateCategory;
 using GlobalTicket.TicketManagement.Application.Contracts.Features.Categories.Queries.GetCategories;
 using GlobalTicket.TicketManagement.Application.Contracts.Features.Categories.Queries.GetCategoriesDetailed;
 using GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig.Commands.CreateEvent;
@@ -19,5 +21,8 @@ public class MappingProfiles: Profile
 		CreateMap<Category, CategoryDto>();
 		CreateMap<Category, CategoryViewModel>();
 		CreateMap<Category, CategoryDetailedViewModel>().ReverseMap();
+
+		CreateMap<Category, CreateCategoryCommand>();
+		CreateMap<Category, UpdateCategoryCommand>().ReverseMap();
 	}
 }

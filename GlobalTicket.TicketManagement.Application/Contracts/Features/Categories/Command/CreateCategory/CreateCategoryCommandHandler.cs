@@ -11,6 +11,7 @@ public class CreateCategoryCommandHandler : CategoryCommandBase<CreateCategoryCo
 	public CreateCategoryCommandHandler(ICategoryRepository categoryRepository, IMapper mapper): base(categoryRepository, mapper)
 	{
 	}
+
 	public override async Task<Guid> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
 	{
 		EnsureArg.IsNotNull(request);
