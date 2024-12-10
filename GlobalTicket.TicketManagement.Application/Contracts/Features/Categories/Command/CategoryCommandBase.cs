@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FluentValidation;
 using GlobalTicket.TicketManagement.Application.Contracts.Persistence;
 using MediatR;
 

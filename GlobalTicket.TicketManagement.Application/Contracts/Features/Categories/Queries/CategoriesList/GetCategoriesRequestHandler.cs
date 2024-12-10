@@ -18,6 +18,7 @@ public class GetCategoriesRequestHandler: IRequestHandler<GetCategoriesRequest, 
 	public async Task<List<CategoryViewModel>> Handle(GetCategoriesRequest request, CancellationToken cancellationToken)
 	{
 		var categories = (await this.categoryRepository.ListAllAsync()).OrderBy(el => el.Name);	
+
 		return mapper.Map<List<CategoryViewModel>>(categories);
 	}
 }

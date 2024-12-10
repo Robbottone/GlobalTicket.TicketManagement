@@ -6,6 +6,8 @@ using GlobalTicket.TicketManagement.Application.Contracts.Features.Categories.Qu
 using GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig.Commands.CreateEvent;
 using GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig.Query.EventGigDetailed;
 using GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig.Query.EventGigList;
+using GlobalTicket.TicketManagement.Application.Contracts.Features.Orders.Command.CreateOrder;
+using GlobalTicket.TicketManagement.Application.Contracts.Features.Orders.Command.UpdateOrder;
 using GlobalTicket.TicketManagement.Domain.Entities;
 
 namespace GlobalTicket.TicketManagement.Application.Contracts.Profiles;
@@ -24,5 +26,8 @@ public class MappingProfiles: Profile
 
 		CreateMap<Category, CreateCategoryCommand>();
 		CreateMap<Category, UpdateCategoryCommand>().ReverseMap();
+
+		CreateMap<Order, CreateOrderCommand>().ReverseMap();
+		CreateMap<Order, UpdateOrderCommand>().ReverseMap();
 	}
 }
