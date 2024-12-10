@@ -3,7 +3,7 @@ using MediatR;
 
 namespace GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig.Commands.CreateEvent;
 
-public class CreateEventGigCommand: IRequest<Guid>
+public class CreateEventGigCommand: IRequest<CreateEventCommandResponse>
 {
 	public required string Name    { get; set; }
 	public string? Description     { get; set; }

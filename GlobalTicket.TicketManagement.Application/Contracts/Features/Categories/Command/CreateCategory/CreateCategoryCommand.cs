@@ -2,7 +2,7 @@
 using EventG = GlobalTicket.TicketManagement.Domain.Entities.EventGig;
 namespace GlobalTicket.TicketManagement.Application.Contracts.Features.Categories.Command.CreateCategory;
 
-public class CreateCategoryCommand: IRequest<Guid>
+public class CreateCategoryCommand: IRequest<CreateCategoryCommandResponse>
 {
 	public Guid Id { get; set; }
 	public string Name { get; set; } = string.Empty;

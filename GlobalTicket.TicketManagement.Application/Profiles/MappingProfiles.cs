@@ -10,9 +10,9 @@ using GlobalTicket.TicketManagement.Application.Contracts.Features.Orders.Comman
 using GlobalTicket.TicketManagement.Application.Contracts.Features.Orders.Command.UpdateOrder;
 using GlobalTicket.TicketManagement.Domain.Entities;
 
-namespace GlobalTicket.TicketManagement.Application.Contracts.Profiles;
+namespace GlobalTicket.TicketManagement.Application.Profiles;
 
-public class MappingProfiles: Profile
+public class MappingProfiles : Profile
 {
 	public MappingProfiles()
 	{
