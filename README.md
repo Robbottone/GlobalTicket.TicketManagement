@@ -11,3 +11,5 @@ Every project uses the DipendencyInjection metodology, extending the IServiceCol
 For example is able to individuate and registrate every Validation Class thorugh Reflection, fetching the assemblies respecting the filter rule set into the Registration methods.
 
 This project does not use any existing commercial application, is just fruit of mine imagination. 
+
+![Image](./DamonReadMe.jpeg){ width="800" height="600" style="display: block; margin: 0 auto" }
