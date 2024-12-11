@@ -15,6 +15,6 @@ public class UpdateEventGigCommandHandler : EventCommandBase<UpdateEventGigComma
 	{	
 		var @event = this.mapper.Map<EventG>(request);
 
-		var updatedEvent = await this.eventRepository.UpdateAsync(@event);
+		await this.eventRepository.UpdateAsync(@event);
 	}
 }

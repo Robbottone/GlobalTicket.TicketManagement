@@ -16,7 +16,7 @@ public class DeleteEventGigCommandHandler : EventCommandBase<DeleteEventGigComma
 	public override async Task Handle(DeleteEventGigCommand request, CancellationToken cancellationToken)
 	{
 		EnsureArg.IsNotNull(request);
-		
-		var delete = await this.eventRepository.DeleteAsync(request.Id);
+
+		await this.eventRepository.DeleteAsync(request.Id);
 	}
 }

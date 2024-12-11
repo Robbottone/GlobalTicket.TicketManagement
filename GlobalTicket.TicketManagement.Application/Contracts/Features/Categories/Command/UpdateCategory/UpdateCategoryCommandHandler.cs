@@ -18,6 +18,6 @@ public class UpdateCategoryCommandHandler : CategoryCommandBase<UpdateCategoryCo
 
 		var category = this.mapper.Map<Category>(request);
 
-		var categoryUpdated = await this.categoryRepository.UpdateAsync(category);
+		await this.categoryRepository.UpdateAsync(category);
 	}
 }
