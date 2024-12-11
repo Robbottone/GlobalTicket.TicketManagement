@@ -1,4 +1,4 @@
-﻿namespace GlobalTicket.TicketManagement.Application.Features.Responses;
+﻿namespace GlobalTicket.TicketManagement.Application.Features.Common.BaseResponse;
 
 public class BaseResponse<T> where T : notnull
 {
