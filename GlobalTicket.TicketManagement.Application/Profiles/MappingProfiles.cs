@@ -1,13 +1,13 @@
 ﻿using AutoMapper;
-using GlobalTicket.TicketManagement.Application.Contracts.Features.Categories.Command.CreateCategory;
-using GlobalTicket.TicketManagement.Application.Contracts.Features.Categories.Command.UpdateCategory;
-using GlobalTicket.TicketManagement.Application.Contracts.Features.Categories.Queries.GetCategories;
-using GlobalTicket.TicketManagement.Application.Contracts.Features.Categories.Queries.GetCategoriesDetailed;
-using GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig.Commands.CreateEvent;
-using GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig.Query.EventGigDetailed;
-using GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig.Query.EventGigList;
-using GlobalTicket.TicketManagement.Application.Contracts.Features.Orders.Command.CreateOrder;
-using GlobalTicket.TicketManagement.Application.Contracts.Features.Orders.Command.UpdateOrder;
+using GlobalTicket.TicketManagement.Application.Features.Categories.Command.CreateCategory;
+using GlobalTicket.TicketManagement.Application.Features.Categories.Command.UpdateCategory;
+using GlobalTicket.TicketManagement.Application.Features.Categories.Queries.CategoriesDetailed;
+using GlobalTicket.TicketManagement.Application.Features.Categories.Queries.CategoriesList;
+using GlobalTicket.TicketManagement.Application.Features.EventGig.Commands.CreateEvent;
+using GlobalTicket.TicketManagement.Application.Features.EventGig.Queries.EventGigDetailed;
+using GlobalTicket.TicketManagement.Application.Features.EventGig.Queries.EventGigList;
+using GlobalTicket.TicketManagement.Application.Features.Orders.Command.CreateOrder;
+using GlobalTicket.TicketManagement.Application.Features.Orders.Command.UpdateOrder;
 using GlobalTicket.TicketManagement.Domain.Entities;
 
 namespace GlobalTicket.TicketManagement.Application.Profiles;
