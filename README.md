@@ -12,4 +12,4 @@ For example is able to individuate and registrate every Validation Class thorugh
 
 This project does not use any existing commercial application, is just fruit of mine imagination. 
 
-![Image](./DamonReadMe.jpeg){ width="800" height="600" style="display: block; margin: 0 auto" }
+![Image](./DamonReadMe.jpeg)
