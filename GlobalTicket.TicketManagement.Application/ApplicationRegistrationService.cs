@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace GlobalTicket.TicketManagement.Application;
 
-public static class ServiceCollectionRegistration
+public static class ApplicationRegistrationService
 {
 	public static IServiceCollection AddServices(this IServiceCollection services)
 	{
