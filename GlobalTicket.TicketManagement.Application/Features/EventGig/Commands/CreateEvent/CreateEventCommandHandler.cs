@@ -3,16 +3,18 @@ using GlobalTicket.TicketManagement.Application.Contracts.Persistence;
 using EventG = GlobalTicket.TicketManagement.Domain.Entities.EventGig;
 using MediatR;
 using EnsureThat;
-using GlobalTicket.TicketManagement.Application.Contracts.Features.EventGig.Commands.CreateEvent;
+using GlobalTicket.TicketManagement.Application.Contracts.Infrastructure;
+using GlobalTicket.TicketManagement.Application.Models.Mail;
 
 namespace GlobalTicket.TicketManagement.Application.Features.EventGig.Commands.CreateEvent;
 
 public class CreateEventCommandHandler : EventCommandBase<CreateEventGigCommand, CreateEventCommandResponse>
 {
+	private IEmailService emailService;
 
-	public CreateEventCommandHandler(IEventGigRepostiory eventRepository, IMapper mapper) : base(eventRepository, mapper)
+	public CreateEventCommandHandler(IEventGigRepostiory eventRepository, IMapper mapper, IEmailService emailService) : base(eventRepository, mapper)
 	{
-
+		this.emailService = emailService;
 	}
 
 	public override async Task<CreateEventCommandResponse> Handle(CreateEventGigCommand request, CancellationToken cancellationToken)
@@ -38,6 +40,20 @@ public class CreateEventCommandHandler : EventCommandBase<CreateEventGigCommand,
 			var @event = mapper.Map<EventG>(request);
 			//insert
 			var addedEvent = await eventRepository.AddAsync(@event);
+
+			try {//fire and forget the sendemail
+			await this.emailService.SendEmail(new Email()
+			{
+				To = "Cal.Duccio@gmail.com",
+				Subject = "Event Created",
+				Body = $"A new event was created: {request}"
+			});
+			}
+			catch (Exception ex)
+			{
+				//log - application must not fail because of email sending
+			}
+
 			createEventCommandResponse.Success = true;
 			createEventCommandResponse.Data = addedEvent;
 		}

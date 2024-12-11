@@ -1,7 +1,6 @@
 ﻿
 using AutoMapper;
 using EnsureThat;
-using GlobalTicket.TicketManagement.Application.Contracts.Features.Categories.Command.CreateCategory;
 using GlobalTicket.TicketManagement.Application.Contracts.Persistence;
 using GlobalTicket.TicketManagement.Application.Features.Categories.Command;
 using GlobalTicket.TicketManagement.Domain.Entities;

@@ -1,5 +1,4 @@
 ﻿using FluentValidation;
-using GlobalTicket.TicketManagement.Application.Contracts.Features.Categories.Command.CreateCategory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
