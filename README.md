@@ -1,15 +1,13 @@
 # GlobalTicket - TicketManager
 
-This solution emulates the correct application of the Clean Architecture principles.
- 
-The application layer implements the MediatR library to guarantee the seperation between the commands/queries and the API project. 
+This solution exemplifies the correct application of Clean Architecture principles.
 
-The commands and query will in turn call the methods exposed by the interfaces formulated into the Certificate folder in order to execute the persistance operations.
-Every persisting operation is represented in Applicaiton as IAsyncRepository, meanwhile its implementation is performed inside the persistence project. 
+The Application layer leverages the MediatR library to ensure a clear separation of concerns between commands/queries and the API project.
 
-Every project uses the DipendencyInjection metodology, extending the IServiceCollection interface for every class library purpouse.
-For example is able to individuate and registrate every Validation Class thorugh Reflection, fetching the assemblies respecting the filter rule set into the Registration methods.
+Commands and queries, in turn, invoke methods defined by interfaces located in the Certificate folder to perform persistence operations. These operations are abstracted as IAsyncRepository interfaces within the Application layer, while their concrete implementations reside in the Persistence project.
 
-This project does not use any existing commercial application, is just fruit of mine imagination. 
+Each project adheres to the Dependency Injection paradigm by extending the IServiceCollection interface within each class library to fulfill its specific purpose. For example, validation classes are identified and registered dynamically through reflection, utilizing assembly filtering rules specified in the registration methods.
+
+This project does not rely on any existing commercial solutions but is instead a conceptual design developed  just fruit of mine imagination.
 
 ![Image](./DamonReadMe.jpeg)
