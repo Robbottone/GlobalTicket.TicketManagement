@@ -1,8 +1,8 @@
 # GlobalTicket - TicketManager
 
-This solution emulates the correct implementation of the Clean Architecture principles.
+This solution emulates the correct application of the Clean Architecture principles.
  
-The application uses the MediatR library to guarantee the seperation between the commands/queries and the API project. 
+The application layer implements the MediatR library to guarantee the seperation between the commands/queries and the API project. 
 
 The commands and query will in turn call the methods exposed by the interfaces formulated into the Certificate folder in order to execute the persistance operations.
 Every persisting operation is represented in Applicaiton as IAsyncRepository, meanwhile its implementation is performed inside the persistence project. 
