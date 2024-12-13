@@ -17,7 +17,7 @@ public static class StartupExtension
 		builder.Services.AddControllers();
 		builder.Services.AddCors(opts => { 
 			opts.AddPolicy("open", 
-			policy => policy.WithOrigins([builder.Configuration["ApiUrl"] ?? "https://localhost:8720", builder.Configuration["BlazorUrl"] ?? "https://localhost:8020"])
+			policy => policy.WithOrigins(["https://localhost:8720", "https://localhost:8020"])
 				.AllowAnyHeader()
 				.AllowAnyMethod()
 				.AllowCredentials()
@@ -54,6 +54,8 @@ public static class StartupExtension
 				await context.Database.MigrateAsync();
 			}
 		}
-		catch(Exception ex){}
+		catch(Exception ex){
+			//log exception
+		}
 	}
 }
