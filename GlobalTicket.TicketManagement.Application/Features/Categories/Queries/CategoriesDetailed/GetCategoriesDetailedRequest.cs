@@ -4,5 +4,10 @@ namespace GlobalTicket.TicketManagement.Application.Features.Categories.Queries.
 
 public class GetCategoriesDetailedRequest : IRequest<IEnumerable<CategoryDetailedViewModel>>
 {
+	public GetCategoriesDetailedRequest(bool includeHistory = false)
+	{
+		this.includeHistory = includeHistory;
+	}	
+
 	public bool includeHistory { get; set; }
 }
