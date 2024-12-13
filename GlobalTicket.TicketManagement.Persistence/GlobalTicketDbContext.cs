@@ -30,27 +30,31 @@ public class GlobalTicketDbContext : DbContext
 		modelBuilder.Entity<Category>().HasData(new Category
 		{
 			Id = concertGuid,
-			Name = "Concerts"
+			Name = "Concerts",
+			CreatedBy = "System"
 		});
 		modelBuilder.Entity<Category>().HasData(new Category
 		{
 			Id = musicalGuid,
-			Name = "Musicals"
+			Name = "Musicals",
+			CreatedBy = "System"
 		});
 		modelBuilder.Entity<Category>().HasData(new Category
 		{
 			Id = playGuid,
-			Name = "Plays"
+			Name = "Plays",
+			CreatedBy = "System"
 		});
 		modelBuilder.Entity<Category>().HasData(new Category
 		{
 			Id = conferenceGuid,
-			Name = "Conferences"
+			Name = "Conferences",
+			CreatedBy = "System"
 		});
 
 		modelBuilder.Entity<EventGig>().HasData(new EventGig
 		{
-			EventId = Guid.Parse("{EE272F8B-6096-4CB6-8625-BB4BB2D89E8B}"),
+			Id = Guid.Parse("{EE272F8B-6096-4CB6-8625-BB4BB2D89E8B}"),
 			Name = "John Egbert Live",
 			Price = 65,
 			Artist = ["John Egbert"],
@@ -61,7 +65,7 @@ public class GlobalTicketDbContext : DbContext
 
 		modelBuilder.Entity<EventGig>().HasData(new EventGig
 		{
-			EventId = Guid.Parse("{3448D5A4-0F72-4DD7-BF15-C14A46B26C00}"),
+			Id = Guid.Parse("{3448D5A4-0F72-4DD7-BF15-C14A46B26C00}"),
 			Name = "The State of Affairs: Michael Live!",
 			Price = 85,
 			Artist = ["Michael Johnson"],
@@ -72,7 +76,7 @@ public class GlobalTicketDbContext : DbContext
 
 		modelBuilder.Entity<EventGig>().HasData(new EventGig
 		{
-			EventId = Guid.Parse("{B419A7CA-3321-4F38-BE8E-4D7B6A529319}"),
+			Id = Guid.Parse("{B419A7CA-3321-4F38-BE8E-4D7B6A529319}"),
 			Name = "Clash of the DJs",
 			Price = 85,
 			Artist = ["DJ 'The Mike'"],
@@ -83,7 +87,7 @@ public class GlobalTicketDbContext : DbContext
 
 		modelBuilder.Entity<EventGig>().HasData(new EventGig
 		{
-			EventId = Guid.Parse("{62787623-4C52-43FE-B0C9-B7044FB5929B}"),
+			Id = Guid.Parse("{62787623-4C52-43FE-B0C9-B7044FB5929B}"),
 			Name = "Spanish guitar hits with Manuel",
 			Price = 25,
 			Artist = ["Manuel Santinonisi"],
@@ -93,7 +97,7 @@ public class GlobalTicketDbContext : DbContext
 		});
 		modelBuilder.Entity<EventGig>().HasData(new EventGig
 		{
-			EventId = Guid.Parse("{1BABD057-E980-4CB3-9CD2-7FDD9E525668}"),
+			Id = Guid.Parse("{1BABD057-E980-4CB3-9CD2-7FDD9E525668}"),
 			Name = "Techorama Belgium",
 			Price = 400,
 			Artist = ["Many"],
@@ -103,7 +107,7 @@ public class GlobalTicketDbContext : DbContext
 		});
 		modelBuilder.Entity<EventGig>().HasData(new EventGig
 		{
-			EventId = Guid.Parse("{ADC42C09-08C1-4D2C-9F96-2D15BB1AF299}"),
+			Id = Guid.Parse("{ADC42C09-08C1-4D2C-9F96-2D15BB1AF299}"),
 			Name = "To the Moon and Back",
 			Price = 135,
 			Artist = ["Nick Sailor"],
@@ -184,6 +188,7 @@ public class GlobalTicketDbContext : DbContext
 			{
 				case EntityState.Added:
 					entry.Entity.Created = DateTime.Now;
+					entry.Entity.CreatedBy = "System";
 					break;
 				case EntityState.Modified:
 					entry.Entity.LastModifiedDate = DateTime.Now;

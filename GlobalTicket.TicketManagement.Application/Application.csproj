@@ -17,11 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GlobalTicket.TicketManagement.Domain\GlobalTicket.TicketManagement.Domain.csproj" />
+    <Folder Include="Features\Orders\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Orders\Queries\" />
+    <ProjectReference Include="..\GlobalTicket.TicketManagement.Domain\Domain.csproj" />
   </ItemGroup>
 
 </Project>
