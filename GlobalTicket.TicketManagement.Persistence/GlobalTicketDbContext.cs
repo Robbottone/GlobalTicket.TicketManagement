@@ -14,7 +14,7 @@ public class GlobalTicketDbContext : DbContext
 	}
 
 	public DbSet<EventGig> Events { get; set; }
-	public DbSet<Category> Categories { get; set; }
+	public DbSet<Category> Categories { get; set; } 
 	public DbSet<Order> Orders { get; set; }
 
 	protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -178,6 +178,14 @@ public class GlobalTicketDbContext : DbContext
 			OrderPlaced = DateTime.Now,
 			UserId = Guid.Parse("{7AEB2C01-FE8E-4B84-A5BA-330BDF950F5C}")
 		});
+	}
+
+	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+	{
+		 // Replace with your SQL Server connection string
+      optionsBuilder.UseSqlServer("Server=GALLUR-NB\\SQLEXPRESS;Database=GlobalTicketDb;Trusted_Connection=True;Encrypt=False;");
+
+		base.OnConfiguring(optionsBuilder);
 	}
 
 	public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
