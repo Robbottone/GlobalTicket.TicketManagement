@@ -1,6 +1,7 @@
 ﻿using GlobalTicket.TicketManagement.Domain.Common;
 using GlobalTicket.TicketManagement.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Logging;
 
 namespace GlobalTicket.TicketManagement.Persistence;
@@ -13,7 +14,7 @@ public class GlobalTicketDbContext : DbContext
 	{
 	}
 
-	public DbSet<EventGig> Events { get; set; }
+	public DbSet<EventGig> EventGigs { get; set; }
 	public DbSet<Category> Categories { get; set; } 
 	public DbSet<Order> Orders { get; set; }
 
@@ -184,6 +185,8 @@ public class GlobalTicketDbContext : DbContext
 	{
 		 // Replace with your SQL Server connection string
       optionsBuilder.UseSqlServer("Server=GALLUR-NB\\SQLEXPRESS;Database=GlobalTicketDb;Trusted_Connection=True;Encrypt=False;");
+
+		optionsBuilder.ConfigureWarnings(warnings => warnings.Ignore(RelationalEventId.PendingModelChangesWarning));
 
 		base.OnConfiguring(optionsBuilder);
 	}

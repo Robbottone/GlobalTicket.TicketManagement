@@ -124,7 +124,7 @@ namespace Persistence.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Events");
+                    b.ToTable("EventGigs");
 
                     b.HasData(
                         new
@@ -135,7 +135,7 @@ namespace Persistence.Migrations
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedBy = "",
                             Description = "Join John for his farwell tour across 15 continents. John really needs no introduction since he has already mesmerized the world with his banjo.",
-                            EventDate = new DateTime(2025, 6, 13, 15, 1, 3, 726, DateTimeKind.Local).AddTicks(817),
+                            EventDate = new DateTime(2025, 6, 16, 14, 19, 7, 232, DateTimeKind.Local).AddTicks(302),
                             Name = "John Egbert Live",
                             Price = 65
                         },
@@ -147,7 +147,7 @@ namespace Persistence.Migrations
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedBy = "",
                             Description = "Michael Johnson doesn't need an introduction. His 25 concert across the globe last year were seen by thousands. Can we add you to the list?",
-                            EventDate = new DateTime(2025, 9, 13, 15, 1, 3, 727, DateTimeKind.Local).AddTicks(7260),
+                            EventDate = new DateTime(2025, 9, 16, 14, 19, 7, 234, DateTimeKind.Local).AddTicks(9963),
                             Name = "The State of Affairs: Michael Live!",
                             Price = 85
                         },
@@ -159,7 +159,7 @@ namespace Persistence.Migrations
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedBy = "",
                             Description = "DJs from all over the world will compete in this epic battle for eternal fame.",
-                            EventDate = new DateTime(2025, 4, 13, 15, 1, 3, 727, DateTimeKind.Local).AddTicks(7328),
+                            EventDate = new DateTime(2025, 4, 16, 14, 19, 7, 235, DateTimeKind.Local).AddTicks(64),
                             Name = "Clash of the DJs",
                             Price = 85
                         },
@@ -171,7 +171,7 @@ namespace Persistence.Migrations
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedBy = "",
                             Description = "Get on the hype of Spanish Guitar concerts with Manuel.",
-                            EventDate = new DateTime(2025, 4, 13, 15, 1, 3, 727, DateTimeKind.Local).AddTicks(7351),
+                            EventDate = new DateTime(2025, 4, 16, 14, 19, 7, 235, DateTimeKind.Local).AddTicks(193),
                             Name = "Spanish guitar hits with Manuel",
                             Price = 25
                         },
@@ -183,7 +183,7 @@ namespace Persistence.Migrations
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedBy = "",
                             Description = "The best tech conference in the world",
-                            EventDate = new DateTime(2025, 10, 13, 15, 1, 3, 727, DateTimeKind.Local).AddTicks(7366),
+                            EventDate = new DateTime(2025, 10, 16, 14, 19, 7, 235, DateTimeKind.Local).AddTicks(220),
                             Name = "Techorama Belgium",
                             Price = 400
                         },
@@ -195,7 +195,7 @@ namespace Persistence.Migrations
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedBy = "",
                             Description = "The critics are over the moon and so will you after you've watched this sing and dance extravaganza written by Nick Sailor, the man from 'My dad and sister'.",
-                            EventDate = new DateTime(2025, 8, 13, 15, 1, 3, 727, DateTimeKind.Local).AddTicks(7384),
+                            EventDate = new DateTime(2025, 8, 16, 14, 19, 7, 235, DateTimeKind.Local).AddTicks(254),
                             Name = "To the Moon and Back",
                             Price = 135
                         });
@@ -247,7 +247,7 @@ namespace Persistence.Migrations
                             CreatedBy = "",
                             EventId = new Guid("00000000-0000-0000-0000-000000000000"),
                             OrderPaid = true,
-                            OrderPlaced = new DateTime(2024, 12, 13, 15, 1, 3, 727, DateTimeKind.Local).AddTicks(8243),
+                            OrderPlaced = new DateTime(2024, 12, 16, 14, 19, 7, 235, DateTimeKind.Local).AddTicks(1804),
                             OrderTotal = 400,
                             UserId = new Guid("a441eb40-9636-4ee6-be49-a66c5ec1330b")
                         },
@@ -258,7 +258,7 @@ namespace Persistence.Migrations
                             CreatedBy = "",
                             EventId = new Guid("00000000-0000-0000-0000-000000000000"),
                             OrderPaid = true,
-                            OrderPlaced = new DateTime(2024, 12, 13, 15, 1, 3, 727, DateTimeKind.Local).AddTicks(8635),
+                            OrderPlaced = new DateTime(2024, 12, 16, 14, 19, 7, 235, DateTimeKind.Local).AddTicks(2535),
                             OrderTotal = 135,
                             UserId = new Guid("ac3cfaf5-34fd-4e4d-bc04-ad1083ddc340")
                         },
@@ -269,7 +269,7 @@ namespace Persistence.Migrations
                             CreatedBy = "",
                             EventId = new Guid("00000000-0000-0000-0000-000000000000"),
                             OrderPaid = true,
-                            OrderPlaced = new DateTime(2024, 12, 13, 15, 1, 3, 727, DateTimeKind.Local).AddTicks(8657),
+                            OrderPlaced = new DateTime(2024, 12, 16, 14, 19, 7, 235, DateTimeKind.Local).AddTicks(2570),
                             OrderTotal = 85,
                             UserId = new Guid("d97a15fc-0d32-41c6-9ddf-62f0735c4c1c")
                         },
@@ -280,7 +280,7 @@ namespace Persistence.Migrations
                             CreatedBy = "",
                             EventId = new Guid("00000000-0000-0000-0000-000000000000"),
                             OrderPaid = true,
-                            OrderPlaced = new DateTime(2024, 12, 13, 15, 1, 3, 727, DateTimeKind.Local).AddTicks(8676),
+                            OrderPlaced = new DateTime(2024, 12, 16, 14, 19, 7, 235, DateTimeKind.Local).AddTicks(2594),
                             OrderTotal = 245,
                             UserId = new Guid("4ad901be-f447-46dd-bcf7-dbe401afa203")
                         },
@@ -291,7 +291,7 @@ namespace Persistence.Migrations
                             CreatedBy = "",
                             EventId = new Guid("00000000-0000-0000-0000-000000000000"),
                             OrderPaid = true,
-                            OrderPlaced = new DateTime(2024, 12, 13, 15, 1, 3, 727, DateTimeKind.Local).AddTicks(8691),
+                            OrderPlaced = new DateTime(2024, 12, 16, 14, 19, 7, 235, DateTimeKind.Local).AddTicks(2618),
                             OrderTotal = 142,
                             UserId = new Guid("7aeb2c01-fe8e-4b84-a5ba-330bdf950f5c")
                         },
@@ -302,7 +302,7 @@ namespace Persistence.Migrations
                             CreatedBy = "",
                             EventId = new Guid("00000000-0000-0000-0000-000000000000"),
                             OrderPaid = true,
-                            OrderPlaced = new DateTime(2024, 12, 13, 15, 1, 3, 727, DateTimeKind.Local).AddTicks(8707),
+                            OrderPlaced = new DateTime(2024, 12, 16, 14, 19, 7, 235, DateTimeKind.Local).AddTicks(2646),
                             OrderTotal = 40,
                             UserId = new Guid("f5a6a3a0-4227-4973-abb5-a63fbe725923")
                         },
@@ -313,7 +313,7 @@ namespace Persistence.Migrations
                             CreatedBy = "",
                             EventId = new Guid("00000000-0000-0000-0000-000000000000"),
                             OrderPaid = true,
-                            OrderPlaced = new DateTime(2024, 12, 13, 15, 1, 3, 727, DateTimeKind.Local).AddTicks(8719),
+                            OrderPlaced = new DateTime(2024, 12, 16, 14, 19, 7, 235, DateTimeKind.Local).AddTicks(2671),
                             OrderTotal = 116,
                             UserId = new Guid("7aeb2c01-fe8e-4b84-a5ba-330bdf950f5c")
                         });
