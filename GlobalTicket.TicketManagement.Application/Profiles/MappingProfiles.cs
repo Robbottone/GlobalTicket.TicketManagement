@@ -19,6 +19,7 @@ public class MappingProfiles : Profile
 		CreateMap<EventGig, EventGigViewModel>().ReverseMap(); //two way mapping
 		CreateMap<EventGig, EventGigDetailedViewModel>().ReverseMap();
 		CreateMap<EventGig, CreateEventGigCommand>().ReverseMap();
+		CreateMap<EventGig, EventGigDto>();
 
 		CreateMap<Category, CategoryDto>();
 		CreateMap<Category, CategoryViewModel>();
