@@ -36,5 +36,12 @@ namespace API.Controllers
 			var result = await _mediator.Send(new GetCategoriesDetailedRequest(), cancellationToken);
 			return Ok(result);
 		}
+
+		[HttpGet("export", Name = "ExportEvents")]
+		public async Task<FileResult> ExportEvents() {
+			var fileDto = await _mediator.Send(new ExportCategoriesQuery());
+
+			return File(fileDto.Data, fileDto.ContentType, fileDto.EventExportFileName);
+		}
 	}
 }
