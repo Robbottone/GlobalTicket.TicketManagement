@@ -24,14 +24,24 @@ public static class StartupExtension
 				.SetIsOriginAllowed(pol => true));
 		});
 
+		builder.Services.AddSwaggerGen();
+
 		return builder.Build();
 	}
 
 	public static WebApplication ConfigurePipelines(this WebApplication app)
 	{
 		app.UseCors("open");
+
+		if(app.Environment.IsDevelopment())
+		{
+			app.UseSwagger();
+			app.UseSwaggerUI();
+		}
+
 		app.UseHttpsRedirection();
 		app.MapControllers();
+		app.UsePathBase(new PathString("/swagger"));
 
 		//app.UseEndpoints(endpoints =>
 		//{

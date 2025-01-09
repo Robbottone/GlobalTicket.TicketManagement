@@ -1,4 +1,5 @@
-﻿using GlobalTicket.TicketManagement.Application.Features.Categories.Queries.CategoriesDetailed;
+﻿using Application.Features.EventGig.Queries.EventExport;
+using GlobalTicket.TicketManagement.Application.Features.Categories.Queries.CategoriesDetailed;
 using GlobalTicket.TicketManagement.Application.Features.Categories.Queries.CategoriesList;
 using GlobalTicket.TicketManagement.Application.Features.Categories.Queries.CategoriesList;
 using MediatR;
@@ -38,8 +39,14 @@ namespace API.Controllers
 		}
 
 		[HttpGet("export", Name = "ExportEvents")]
-		public async Task<FileResult> ExportEvents() {
-			var fileDto = await _mediator.Send(new ExportCategoriesQuery());
+		public async Task<ActionResult> ExportEvents()
+		{
+			var fileDto = await _mediator.Send(new EventExportRequest());
+
+			if (fileDto.Data == null)
+			{
+				return NotFound();
+			}
 
 			return File(fileDto.Data, fileDto.ContentType, fileDto.EventExportFileName);
 		}
