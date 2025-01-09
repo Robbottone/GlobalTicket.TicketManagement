@@ -25,7 +25,7 @@ public class MappingProfiles : Profile
 		CreateMap<Category, CategoryViewModel>();
 		CreateMap<Category, CategoryDetailedViewModel>().ReverseMap();
 
-		CreateMap<Category, CreateCategoryCommand>();
+		CreateMap<Category, CreateCategoryCommand>().ReverseMap();
 		CreateMap<Category, UpdateCategoryCommand>().ReverseMap();
 
 		CreateMap<Order, CreateOrderCommand>().ReverseMap();
